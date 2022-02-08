@@ -1,0 +1,52 @@
+This is an app that uses GPS coordinates to create "trips" which users will be able to store and view data such as elevation change and distance.
+
+Social component: 
+- minimal emphasis on profiles
+- mainly comparing trips between users who are linked as friends.
+
+
+DB Schema
+
+User
+{
+userID
+email
+password
+current GPS location
+current elevation
+residence
+trips [tripIDs]
+friends[userIDs]
+}
+
+Trip
+{
+tripID
+name
+description
+area
+coordinates[]
+totalDistance
+avgSpeed
+avgElevation
+startTime
+endTime
+}
+
+tripComp
+{
+   tripA{
+      user
+      area
+      distance
+      avgSpeed
+      avgElevation
+   }
+   tripB{
+      user
+      area
+      distance
+      avgSpeed
+      avgElevation
+   }
+}
